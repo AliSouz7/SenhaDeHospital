@@ -20,18 +20,17 @@ public class Main {
 
             switch (opcao){
                 case 1:
-
+                    filaDeAtendimento.adicionarPaciente();
                     break;
                 case 2:
-
+                    filaDeAtendimento.chamarProximoPaciente();
                     break;
                 case 3:
-
+                    filaDeAtendimento.mostrarHistorico();
                     break;
                 case 4:
-
+                    filaDeAtendimento.reiniciarFila();
                     break;
-
                 case 5:
                     System.out.println("Sistema encerrado");
                     scanner.close();
