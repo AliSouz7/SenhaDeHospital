@@ -49,5 +49,10 @@ public class FilaDeAtendimento {
         System.out.println("Fila e historico de senhas reiniciado com sucesso.");
     }
 
+    //verificar se ainda tem pacientes na fila
+    public boolean temPacientesNaFilaa (){
+        return !filaDePacientes.isEmpty();
+    }
+
 
 }
