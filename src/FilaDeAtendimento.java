@@ -41,5 +41,13 @@ public class FilaDeAtendimento {
         }
     }
 
+    //Reiniciar a fila e a contagem de senhas
+    public void reiniciarFila() {
+        filaDePacientes.clear();
+        historicoDeChamadas.clear();
+        geradorDeSenha.reiniciarContadorSenha();
+        System.out.println("Fila e historico de senhas reiniciado com sucesso.");
+    }
+
 
 }
