@@ -5,12 +5,12 @@ import java.util.ArrayList;
 
 public class FilaDeAtendimento {
     private Queue<String> filaDePacientes;
-    private List<String> históricoDeChamadas;
+    private List<String> historicoDeChamadas;
     private GeradorDeSenha geradorDeSenha;
 
     public FilaDeAtendimento() {
         this.filaDePacientes = new LinkedList<>();
-        this.históricoDeChamadas = new ArrayList<>();
+        this.historicoDeChamadas = new ArrayList<>();
         this.geradorDeSenha = new GeradorDeSenha();
     }
 
@@ -25,10 +25,19 @@ public class FilaDeAtendimento {
     public void chamarProximoPaciente(){
         if(!filaDePacientes.isEmpty()) {
             String senhaChamada = filaDePacientes.poll();// Esse metodo remove e retorna o primeiro elemento da fila (FIFO - First In, First Out)
-            históricoDeChamadas.add(senhaChamada);
+            historicoDeChamadas.add(senhaChamada);
             System.out.println("Chamando o paciente: " + senhaChamada);
         } else {
             System.out.println("Nenhum paciente adicionado na fila.");
+        }
+    }
+
+    //Historico ade chamadas
+    public void mostrarHistorico(){
+        if (historicoDeChamadas.isEmpty()) {
+            System.out.println("Nenhum paciente foi chamado ainda");
+        } else {
+            System.out.println("Historico de chamadas: " + historicoDeChamadas);
         }
     }
 
